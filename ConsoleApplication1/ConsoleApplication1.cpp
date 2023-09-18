@@ -306,17 +306,141 @@ int main()  // 19.3
 
     cout << h << endl;
     return 0;
-}*/
+}
 
 int main()  // 19.4
 {
-    double h, r, fullArea;
-    cout << "fullArea, radius" << endl;
-    cin >> fullArea >> r;
+    double a, b, angle, result;
+    cout << "a, b, angle" << endl;
+    cin >> a >> b >> angle;
 
 
-    h = (fullArea - (2 * PI * pow(r, 2))) / (2 * PI * r);
+    result = 0.5 * sin(angle * PI / 180) * a * b;
 
-    cout << h << endl;
+    cout << result << endl;
+    return 0;
+}
+
+int main()  // 19.5
+{
+    double a, b, c, halfSum, area;
+    cout << "a, b, c" << endl;
+    cin >> a >> b >> c;
+
+    halfSum = (a + b + c) / 2;
+    area = sqrt(halfSum * (halfSum - a) * (halfSum - b) * (halfSum - c));
+
+    cout << 2 * area / a << " "  << 2 * area / b << " " << 2 * area / c << endl;
+    return 0;
+}
+
+int main()  // 19.6
+{
+    double a, angle, area;
+    cout << "a, angle" << endl;
+    cin >> a >> angle;
+
+    
+    area = sin(angle * PI / 180) * a * a;
+
+    cout << area << endl;
+    return 0;
+}
+
+int main()  // 19.7
+{
+    double baseDown, baseUp,  hight, area;
+    cout << "baseDown, baseUp, hight" << endl;
+    cin >> baseDown >> baseUp >> hight;
+
+
+    area = ((baseDown + baseUp) / 2) * hight;
+
+    cout << area << endl;
+    return 0;
+}
+
+int main()  // 19.8
+{
+    double hight, baseSide, capacity;
+    cout << "hight, side" << endl;
+    cin >> hight >> baseSide;
+
+
+    capacity = (baseSide * baseSide * hight) / 3;
+
+    cout << capacity << endl;
+    return 0;
+}
+
+int main()  // 20
+{
+    double hours, minutes, f, k;
+    cin >> f;
+
+    hours = f / 360 * 12;
+    cout << static_cast<int>(hours);
+
+    minutes = (hours - static_cast<int>(hours)) * 60;
+    if (minutes < 10) {
+        cout << ":0" << minutes << endl;
+        return 0;
+    }
+    cout << ":" << minutes << endl;
+    return 0;
+}
+
+int main()  // 20.1
+{
+    double hours, minutes, f, k;
+    cin >> f;
+
+    hours = f / 360 * 12;
+    cout << static_cast<int>(hours);
+
+    minutes = (hours - static_cast<int>(hours)) * 60;
+    if (minutes < 10) {
+        cout << ":0" << minutes << endl;
+        return 0;
+    }
+    cout << ":" << minutes << endl;
+    return 0;
+}
+
+int main()  // 20.2
+{
+    int result;
+    double x, val;
+    cin >> x;
+    result = (x - static_cast<int>(x)) * 10;
+    cout << result << endl;
+
+    return 0;
+}
+
+int main()  // 20.2
+{
+    int result;
+    double x, val;
+    cin >> x;
+    result = (x - static_cast<int>(x)) * 10;
+    cout << result << endl;
+
+    return 0;
+}*/
+
+int main()  // 20.12
+{
+    double x,y, result, temp;
+    cout << "x, y" << endl;
+    cin >> x >> y;
+    if (x <= 0 || y <= 0) {
+        cout << "x, y <= 0" << endl;
+        return 0;
+    }
+
+    result = pow((x + 4), (3 * y - 2)) + log10(pow(x, 3) + pow(y, 3)) - pow((pow(x, 3) + pow(y, 3)), 1.0 / 6);
+    cout << result << endl;
+
     return 0;
 }
