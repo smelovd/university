@@ -307,3 +307,15 @@ int main()  // 19.3
     return 0;
 }*/
 
+int main()  // 19.4
+{
+    double h, r, fullArea;
+    cout << "fullArea, radius" << endl;
+    cin >> fullArea >> r;
+
+
+    h = (fullArea - (2 * PI * pow(r, 2))) / (2 * PI * r);
+
+    cout << h << endl;
+    return 0;
+}
